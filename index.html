@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élégance | Luxury Women's Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: '#800020',
+                        navy: '#000080',
+                        blush: '#FFE4E1',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="font-serif text-3xl text-burgundy">Élégance</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-navy hover:text-burgundy transition">Collections</a>
+                    <a href="#" class="text-navy hover:text-burgundy transition">New Arrivals</a>
+                    <a href="#" class="text-navy hover:text-burgundy transition">About</a>
+                    <a href="#" class="text-navy hover:text-burgundy transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <i class="bi bi-search text-xl cursor-pointer hover:text-burgundy"></i>
+                    <i class="bi bi-bag text-xl cursor-pointer hover:text-burgundy"></i>
+                    <button class="md:hidden"><i class="bi bi-list text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80" 
+                 class="w-full h-full object-cover" alt="Luxury Fashion">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+        <div class="relative h-full flex items-center justify-center text-center">
+            <div class="text-white px-4">
+                <h2 class="font-serif text-5xl md:text-7xl mb-4">Autumn Collection 2023</h2>
+                <p class="text-xl mb-8">Elevate Your Wardrobe with Timeless Elegance</p>
+                <button class="bg-white text-burgundy px-8 py-3 hover:bg-burgundy hover:text-white transition duration-300">
+                    Shop Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="py-20 bg-blush">
+        <div class="container mx-auto px-4">
+            <h3 class="font-serif text-4xl text-center mb-12 text-burgundy">Luxury Collections</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&q=80" 
+                         class="w-full h-[400px] object-cover" alt="Evening Wear">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4">
+                        <h4 class="font-serif text-2xl text-burgundy">Evening Wear</h4>
+                        <p class="text-navy">Discover elegance</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1537832816519-689692861c40?auto=format&fit=crop&q=80" 
+                         class="w-full h-[400px] object-cover" alt="Accessories">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4">
+                        <h4 class="font-serif text-2xl text-burgundy">Accessories</h4>
+                        <p class="text-navy">Complete your look</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80" 
+                         class="w-full h-[400px] object-cover" alt="Casual Luxury">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4">
+                        <h4 class="font-serif text-2xl text-burgundy">Casual Luxury</h4>
+                        <p class="text-navy">Effortless style</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h3 class="font-serif text-4xl text-center mb-12 text-burgundy">New Arrivals</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?auto=format&fit=crop&q=80" 
+                             class="w-full h-[350px] object-cover transform group-hover:scale-105 transition duration-500" alt="Product">
+                        <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-burgundy px-6 py-2 opacity-0 group-hover:opacity-100 transition duration-300">
+                            Quick View
+                        </button>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-serif text-xl text-burgundy">Silk Evening Gown</h4>
+                        <p class="text-gray-600">$1,299</p>
+                    </div>
+                </div>
+                <!-- Repeated for other products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-navy py-16 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="font-serif text-3xl mb-4">Join Our Exclusive Circle</h3>
+            <p class="mb-8">Be the first to know about new collections and exclusive offers</p>
+            <form class="max-w-md mx-auto">
+                <div class="flex gap-4">
+                    <input type="email" placeholder="Enter your email" 
+                           class="flex-1 px-4 py-2 text-gray-800 focus:outline-none">
+                    <button class="bg-burgundy px-8 py-2 hover:bg-blush hover:text-burgundy transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-navy">
+                <div>
+                    <h4 class="font-serif text-2xl text-burgundy mb-4">Élégance</h4>
+                    <p class="text-sm">Luxury women's fashion house established in 2023</p>
+                </div>
+                <div>
+                    <h5 class="font-serif text-lg mb-4">Customer Care</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-burgundy">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-burgundy">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-burgundy">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-serif text-lg mb-4">About</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-burgundy">Our Story</a></li>
+                        <li><a href="#" class="hover:text-burgundy">Careers</a></li>
+                        <li><a href="#" class="hover:text-burgundy">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-serif text-lg mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-xl hover:text-burgundy"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-xl hover:text-burgundy"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-xl hover:text-burgundy"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
+                <p>&copy; 2023 Élégance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-white z-50 p-4';
+            mobileMenu.innerHTML = `
+                <div class="flex justify-end">
+                    <button class="text-2xl p-2" onclick="this.parentElement.parentElement.remove()">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col items-center space-y-4 mt-8">
+                    <a href="#" class="text-navy hover:text-burgundy text-xl">Collections</a>
+                    <a href="#" class="text-navy hover:text-burgundy text-xl">New Arrivals</a>
+                    <a href="#" class="text-navy hover:text-burgundy text-xl">About</a>
+                    <a href="#" class="text-navy hover:text-burgundy text-xl">Contact</a>
+                </div>
+            `;
+            document.body.appendChild(mobileMenu);
+        });
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
